@@ -41,8 +41,14 @@ class Visualizer {
     //???WRITE THIS METHOD!!!
     //THESE ARE WRONG: They just illustrate how they could look
   int z = 0;
-  int [] s = new int [] {1,2,3,-4,5,6,7,8};
+  int [] s = new int [] {1,2,3,-4,5,6,7,8, -1, 9, 7, -1};
   for (int i = 0; i < s.length; i ++){
+    if (s[i] < 0){
+    fill (255,0,0);
+    }
+    else{
+      fill(0,255,0);
+    }
     rect(x + z, 100 + y, 20, s[i] * -10);
     z = z + 20;
   }
